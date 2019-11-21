@@ -72,3 +72,19 @@ int main()
   return 0; 
   }
 
+//--------------------------
+int main() {
+	int tc, a, b, c, ans;
+	scanf("%d", &tc);
+	while (tc--) {
+		scanf("%d %d", &a, &b);
+		c = abs(a - b);
+		ans = c / 5;
+		c %= 5;
+		ans += (c / 2);
+		c %= 2;
+		ans += c;
+		printf("%d\n", ans);
+	}
+	return 0;
+}
