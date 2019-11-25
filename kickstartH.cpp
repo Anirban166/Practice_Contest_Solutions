@@ -1,4 +1,3 @@
-//not fully completed:
 //#include"Anirban166.h"
 #include <iostream>
 #include <algorithm>
@@ -97,7 +96,7 @@ int main(){
 //----------------
 #include <bits/stdc++.h>
 using namespace std;
-using nagai=long long;
+using ll=long long;
 #define sz(x) int((x).size())
 
 const int N=500;
@@ -162,7 +161,7 @@ int main(){
 #include <bits/stdc++.h>
 
 using namespace std;
-using nagai=long long;
+using ll=long long;
 #define sz(x) int((x).size())
 
 nagai c[10];
