@@ -1,13 +1,20 @@
 
     int leftMostColumnWithOne(BinaryMatrix &binaryMatrix) {
-        list<int> dimension = binaryMatrix.dimensions();
-        int row = dimension.get(0);
-        int col = dimension.get(1);
-        int i=0, j = col-1, minIndex = -1;
-        while(i< row && j>=0)
-        {
-            if(binaryMatrix.get(i,j)==0) i++;
-            else { minIndex =j; --j; }
+        vector<int> v = binaryMatrix.dimensions();
+        int H = v[0], W = v[1];
+        int answer = W;
+        for(int row = 0; row < H; ++row)
+        { int low = 0, high = W -1; 
+          while(low <= high)
+          { int mid = low + (high - low)/2;
+            if(binaryMatrix.get(row, mid)==1)
+            { answer = min(answer, mid); 
+               high = mid -1;
+            }
+            else low = mid +1;
+           
+           }
         }
-        return minIndex;
+        if(answer == W) answer = -1;
+        return answer;
     }
