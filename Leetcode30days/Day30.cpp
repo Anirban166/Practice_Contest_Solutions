@@ -21,7 +21,7 @@ public:
     bool checkValidity(TreeNode* root, int[] arr, int index)
     {
         
-        if(root = nullptr || index >= arr.size()) 
+        if(root == nullptr || index >= arr.size()) 
             return false;
         
         if(root.left == nullptr && root.right == null)
